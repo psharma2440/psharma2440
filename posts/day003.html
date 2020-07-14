@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    
+        <title> DAY002</title>
+        <body>
+            <h1>goLanguage Programming</h1>
+            <h2>~~~~GO Program "To print Area of Rectangle".~~~~</h2>
+            <h3>
+                <pre>
+                    <code class="language-go">
+                //To find area of Rectangle
+                package main 
+
+                import "fmt"
+
+                func main(){
+                    var length int = 2
+                    var breadth int = 5
+                    var area int = length * breadth
+                    fmt.Println(area)
+                }
+            </code>
+        </pre>
+
+            </h3>
+        <h2>Explanation of the code:-</h2>
+        <p>As we all known the structure of the goLang. In this, We have three block i.e. Package Name, Import Statement, Function Statement, that are explained below.<br>
+            Structure of a program:<br>
+            1.	Package Name: In this we give the package name of the program, in my code i gave package name i.e. package main. <br> 
+            2.	Import Statement:In this programmer has the choice whether he wants inputs from user or not? in my code i gave the inputs. So, i used import "fmt"<br>
+            3.	Main Function: In this programmer has to write their code.<br>
+            <pre>
+                <code class="language-go">
+                    // Main Function Syntax:
+                    func main(){
+                        ........
+                        ..........
+                        ........
+                        ..........
+                    }
+                </code>
+            </pre>
+            
+  <h2>"Area of a Rectangle"</h2>
+  <pre>
+    <code class="language-go">
+
+                func main(){
+                    var length int = 2 
+                    var breadth int = 5 
+                    var area int = length * breadth
+                    fmt.Println("Area of the reatangle:") 
+                    fmt.Println(area)
+                </code>
+            </pre>
+                    <pre>
+                        <code class="language-shell">$ go run main.go 
+Area of a reatangle:
+10
+</code>
+                    </pre>
+                    <h2>Variable:</h2> 
+                    <p>Variable is an identifier whose value is allow to change during program execution. In Go, a variable must be declared before it`s use. A variable is declared as type identifier; where type is a data type of a variable and identifier is the name given to the variable.<br>
+                        <pre>
+                            <code class="language-go">
+                                // Variable Syntax:
+                         keyword        variable(identifier)            datatype
+                        </code>
+                    </pre>
+                        <h2>For Example:var length int</h2><br>
+                        
+                        </p> 
+
+                <h2>Output Statement:</h2>
+                To print the output on console(command prompt, terminal). We use fmt package to display output.
+                <pre>
+                    <code class="language-go">
+                        // Output Statement Syntax:
+                        fmt.Println("String")
+                        fmt.Println(functionName)
+                    </code>
+                </pre>
+fmt: Format.<br>
+Print: To print.<br>
+Ln- new line.<br>
+                <h3>For Example: fmt.Pritnln(area)<br>
+                    fmt.Println("Area of a reatangle")<br></h3>
+        </body>
+    </head>
+</html>

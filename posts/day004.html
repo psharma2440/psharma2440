@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+        </head>
+        <title>
+            Day004
+        </title>
+    
+    <body>
+        <h1>Day004:Second Program</h1>
+        <br>
+        <h2>~ ~ ~ ~ GO Program "To take two numbers from user and print the sum of two numbers".~ ~ ~ ~ </h2>
+        <h3>
+            <pre>
+                <code class="language-go">
+                // Take inputs from user and sum them.
+
+
+
+                package main
+
+                import (
+	            "bufio"
+	            "fmt"
+	            "os"
+                "strconv"
+                "strings"
+                )
+                func main() {
+                    reader := bufio.NewReader(os.Stdin)
+                    fmt.Println("Enter a number:")
+                    number1, _ := reader.ReadString('\n')
+                    number1 = strings.TrimSpace(number1)
+                    intNumber1, _ := strconv.Atoi(number1)
+                    fmt.Println("Enter another number:")
+                    number2, _ := reader.ReadString('\n')
+                    number2 = strings.TrimSpace(number2)
+                    intNumber2, _ := strconv.Atoi(number2)
+                    sum := intNumber1 + intNumber2
+                    fmt.Println("Sum of number1 and number2:", sum)
+                }
+            </code>
+        </pre>
+        <pre>
+            <code>
+                 // Output:
+                 Enter a number:
+                 1
+                 Enter another number:
+                 2
+                 Sum of number1 and number2: 3
+            </code>
+        </pre>
+    </h3>
+    <h2>
+        Explaination of the code:
+        <br>
+    </h2>
+    <p>
+        <h3>"bufio" stands for buffer input output, is the package name and it is use after package main which is shown below.<br>
+            Syntax:
+            <pre>
+                <code>
+                    //Syntax 
+
+
+
+                    package main
+
+                    import (
+	                   "bufio"
+	                    "fmt"
+                         "os"
+                    )
+                    func main() {
+                        reader := bufio.NewReader(os.Stdin)
+                    // reader is a variable, bufio is the package that contains operations related to input and output , os stands for operating system, Stdin stands from standardInput.
+                    }
+                </code>
+            </pre>
+            To print the statement we use "fmt.Println()".
+        <pre>
+            <code>
+                func main(){
+                fmt.Println("  ")
+                // String is print on the terminal.
+                }
+            </code>
+        </pre>
+        To read the string we use "ReadString" and syntax is shown you below.
+        <pre>
+            <code>
+                // Syntax
+
+                func main() {
+                    x, _ := reader.ReadString('\n')
+                    // x is a variable, _ it is used if there is error return, ReadString is used to read the string.
+                }
+            </code>
+        </pre>
+        To delete/trim the space of string we use "string.TrimSpace".
+        <pre>
+            <code>
+                func main(){
+                x = strings.TrimSpace(x)
+                // x is a variable
+                }
+            </code>
+        </pre>
+        </h3>
+        <h1>I can share you some more example:</h1>
+        <h2>1)Example<br> ~ ~ ~ ~ To calculate the area of Rectangle."~ ~ ~ ~</h2>
+        <pre>
+            <code>
+//Area of Rectangle
+
+package main
+
+// Area of rectangle
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Enter the length")
+	length, _ := reader.ReadString('\n')
+	length = strings.TrimSpace(length)
+	intLength, _ := strconv.Atoi(length)
+	fmt.Println("Enter the breadth")
+	breadth, _ := reader.ReadString('\n')
+	breadth = strings.TrimSpace(breadth)
+	intBreadth, _ := strconv.Atoi(breadth)
+	area := intLength * intBreadth
+	fmt.Println("Area ", area)
+}
+            </code>
+        </pre>
+        <h2>Output Area of Rectangle:</h2>
+        <pre>
+            <code>
+// Output:
+Enter the length
+55
+Enter the breadth
+10
+Area  550
+            </code>
+        </pre>
+        <h2> 2)Example<br> </h2> <h2>~ ~ ~ ~ "Program to check user is eligible for vote or not". ~ ~ ~ ~</h2>
+        <pre>
+            <code>
+                // Check user is eligible for vote or not.
+                package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Enter age:")
+	age, _ := reader.ReadString('\n')
+	age = strings.TrimSpace(age)
+	intAge, _ := strconv.Atoi(age)
+	fmt.Println("Age enter by user:", intAge)
+	if intAge < 18 {
+		fmt.Println("You are not eligible for vote.")
+	}
+	if intAge >= 18 {
+		fmt.Println("You are eligible for vote")
+	}
+
+}
+            </code>
+        </pre>
+        <h2>Output To check user is eligible for vote or not.</h2>
+        <pre>
+            <code>
+//Output:
+ Enter age:
+18
+ Age enter by user: 18
+You are eligible for vote
+            </code>
+        </pre>
+    </p>
+    </body>
+</html>
