@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <title>Day007</title>
+    <body>
+        <form>
+            <input type="button" value="back" onclick="history.back()">
+        </form>
+        <h1 style="margin-left: 20%;">goLanguage Program - Using if-else statement</h1>
+        <hr> <br>
+        <h2>Write a program to find the largest number between two number.</h2>
+        <pre>
+            <code class="language-go">
+                
+package main
+
+import "fmt"
+
+func main() {
+	var age int = 17
+	fmt.Println(age >= 18)
+	if age >= 18 {
+		fmt.Println("you are eligible for the vote")
+	}
+
+	var num1 int = 20
+	var num2 int = 11
+	
+	if num1 > num2 {
+		fmt.Println("num1 is greater than num2")	
+	}else {
+		fmt.Println("num2 is greater than num1")
+	}
+}
+ 
+            </code>
+        </pre>
+        <h2>Output:</h2>
+        <pre>
+            <code class="language-go">
+        
+                // Output:
+                num1 is greater than num2
+            </code>
+        </pre>
+        <h3>Explaination of the code:</h3>
+        <p>
+          <b> if-else is  also a Conditional Controlled Structure that allows to execute any one of the two statement depending 
+        upon the values of Expression.</b> In this we have two statement in this if num1 is greater than num2 then first statement execute otherwise else statement is executed.
+        </p>
+        <h2>"Write a program to find largest / greater number between two numbers".</h2>
+        <pre>
+            <code class="language-go">
+                package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Enter a number1:")
+	number1, _ := reader.ReadString('\n')
+	number1 = strings.TrimSpace(number1)
+	intNumber1, _ := strconv.Atoi(number1)
+	fmt.Println("Enter a number2:")
+	number2, _ := reader.ReadString('\n')
+	number2 = strings.TrimSpace(number2)
+	intNumber2, _ := strconv.Atoi(number2)
+	fmt.Println("Numbers entered by user:", intNumber1, intNumber2)
+	if intNumber1 > intNumber2 {
+		fmt.Println("number1 is largest than number2")
+	}else{
+		fmt.Println("number2 is largest than number1")
+	}
+}
+
+            </code>
+        </pre>
+        <h2>Output:</h2>
+        <pre>
+            <code class="language-go">
+                // Output:
+                Enter a number1:
+2
+Enter a number2:
+5
+Numbers entered by user: 2 5
+number2 is largest than number1
+            </code>
+        </pre>
+        <h3>Explaination of the code:</h3>
+        <p>
+            <b> if-else is  also a Conditional Controlled Structure that allows to execute any one of the two statement depending 
+          upon the values of Expression.</b> In this we have two statement in this if  user enter two numbers. if number1 is largest than number2 then first statement executed i.e. number1 is largest than number2 otherwise else statement is executed i.e.number2 is largest than number1.
+          </p>
+        </body>
+        </html>
+
+    
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <title>Day008</title>
+    <body>
+        <form>
+            <input type="button" value="back" onclick="history.back()">
+        </form>
+        <h1 style="margin-left: 20%;">goLanguage Program - Using Nested if-else statement</h1>
+        <hr> <br>
+        <h2><b>Nested if else statement: When one if-else structure is embedded into another if-else it is called nested if-else.</b><br></h2>
+    <br>
+    <br>
+
+        <h3>"Write a Program to take an input from user and check the following conditions Using Nested if-else:"<br>
+            a) if temp is equal to 30 then print string - It`s lovely day!<br>
+            b) else - if temp is greater than 30 then print string - It`s cold day!<br>
+            b) else - if temp is less than 30 then print string - It`s sunny day!<br>
+            d) else print the string - Enjoy your day! <br>
+        </h3>
+        <pre>
+            <code class="language-go">
+                package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+	"time"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Enter temp")
+	temp, _ := reader.ReadString('\n')
+	temp = strings.TrimSpace(temp)
+	temp1, _ := strconv.Atoi(temp)
+	fmt.Println("Temp entered by user:", temp1)
+	if temp1 == 30 {
+		fmt.Println("It`s lovely day!") // first statement
+	} else if temp1 > 30 {
+		fmt.Println("It`s sunny day!") // second statement
+	} else if temp1 < 30 {
+		fmt.Println("It`s cold day!") // third statement
+	} else {
+		fmt.Println("Enjoy your day!") // fourth statement
+	}
+}
+
+            </code>
+        </pre>
+        <h2>Output:</h2>
+
+        <pre>
+            <code class= "language-go">
+                //Output:
+Enter temp
+45
+Temp entered by user: 45
+It`s sunny day!
+            </code>
+        </pre>
+
+        <h3>Explaination of the Program:</h3>
+
+        <h3>Nested if - else syntax:</h3><br>
+
+        <pre>
+            <code class="language-go">
+if  condition-1 { 
+ // code to be executed if condition-1 is true
+} else if condition-2 {
+    // code to be executed if condition-2 is true
+ } else {
+// code to be executed if both condition1 and condition2 are false
+}
+    </code>
+</pre>
+
+<p>In this we check three conditions and take the value of temp from user<br>
+            1)if temp is equal to 30 than print It`s lovely day! - So, in this execute if statement.<br>
+            2) if temp is greater than 30 than print It`s sunny day!- So, in this execute the second statement.(else-if)<br>
+            3) otherwiswe execute third statement i.e. It`s cold day!<br>
+         else print Enjoy your day! i.e. fourth statement.<br>
+         <b>So, in our program user entered the temp value is 45 <br>
+         Therefore, Second statement is executed i.e. It`s sunny day!<b>
+        </p>
+        </body>
+        </html>
+ 

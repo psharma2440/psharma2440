@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <title>Day006</title>
+    <body>
+        <form>
+            <input type="button" value="back" onclick="history.back()">
+        </form>
+        <h1 style="margin-left: 20%;">goLanguage Program - Using if statement</h1>
+        <hr> <br>
+        <h2>"Write a program to find largest / greater number between two numbers".<br></h2>
+        <pre>
+            <code class="language-go">
+                
+package main
+
+import "fmt"
+
+func main() {
+    var num1 int = 20
+	var num2 int = 11
+	fmt.Println(num1 > num2)
+	if num1 > num2 {
+		fmt.Println("num1 is greater than num2")	
+	}
+	if num1 < num2 {
+		fmt.Println("num2 is greater than num1")
+	}
+}
+            </code>
+        </pre>
+        <h2>Output of the Program:</h2>
+        <pre>
+            <code class="language-go">
+                // Output of the Program: "Write a program to find largest / greater number between two numbers".
+
+                num1 is greater than num2
+
+            </code>
+        </pre>
+        <h2>Explaination of the program:</h2>
+        <hr>
+        <h3>In this we have two inputs i.e. num1 and num2.</h3><br>
+        <h4>Variable Syntax:</h4>
+        <pre>
+            <code class="language-go">
+                // Variable Syntax:
+                         keyword        variable(identifier)            datatype   =  value
+                 Example:   Var           num1                           int       =   12   
+            </code>
+        </pre>
+     <p>After assign the value to input we check which number is largest. So, in this 
+         we use <b>If Conditional Controlled Structure:-</b> It is a Conditional Controlled Structure that is used to compare two quantites.
+         In our program we have two quantites i.e. num1 and num2. If num1 is largest / greater than num2 then first if statement is execute otherwise 
+         if second statement is execute.<br>
+         <b>If statement Syntax:</b>
+         <pre>
+             <code class="language-go">
+                 // Syntax:
+                 if Condition {
+                     // statement
+                 }
+
+// if is a keyword. Expression / condition may be variable, constant, arithmetic Expression or relational Expression.
+ // statement may be single or compound statement.
+             </code>
+         </pre>
+     </p>
+<h2>"Write a program to find largest / greater number between two numbers and input the numbers from user."</h2>
+<pre>
+    <code class="language-go">
+        package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Enter a number1:")
+	number1, _ := reader.ReadString('\n')
+	number1 = strings.TrimSpace(number1)
+	intNumber1, _ := strconv.Atoi(number1)
+	fmt.Println("Enter a number2:")
+	number2, _ := reader.ReadString('\n')
+	number2 = strings.TrimSpace(number2)
+	intNumber2, _ := strconv.Atoi(number2)
+	fmt.Println("Numbers entered by user:", intNumber1, intNumber2)
+	if intNumber1 > intNumber2 {
+		fmt.Println("number1 is largest than number2")
+	}
+	if intNumber1 < intNumber2 {
+		fmt.Println("number2 is largest than number1")
+	}
+}
+
+    </code>
+</pre>
+<h2>Output:</h2>
+<pre>
+    <code class="language-go">
+        // Output: 
+Enter a number1:
+2
+Enter a number2:
+5
+Numbers entered by user: 2 5
+number2 is largest than number1
+    </code>
+</pre>
+    </body>
+</html>

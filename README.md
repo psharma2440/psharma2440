@@ -1,11 +1,20 @@
-# psharma2440
-Personal Website
+**GitHub**
 
-  *Hello Everyone*
+Basic writing and formatting syntax:
+- - - - -
+**1) For Heading:**
+   To create a heading, add one to six # symbols before your heading. It is simillar to h1-h6 (HTML). 
 
-  # Hope you all are fine?
+**Syntax:** # Largest heading and for Smallest heading use ######.
 
-> To my page 
+**Example**:
+> # Hello World!
+>  ## Hello World!
+>  ### Hello World!
+> #### Hello World!
+> ##### Hello World!
+> ###### Hello World!
+
 
 Are you ready :
 ```
@@ -24,10 +33,10 @@ Thank you
 
  # How to make coffee?(2 cups)
  1. Take a pan.
- 1. Add 1 tablespoon coffee. 
- 2. Add sugar.
- 3. Add 1 cup milk and turn on the flame.
- 4. Boil.
+ 2. Add 1 tablespoon coffee. 
+ 3. Add sugar.
+ 4. Add 1 cup milk and turn on the flame.
+ 5. Boil.
 
 # Nested list:-
 1. Welcome to my home

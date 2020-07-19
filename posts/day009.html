@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <title>Day009</title>
+    <body>
+        <form>
+            <input type="button" value="back" onclick="history.back()">
+        </form>
+        <h1 style="margin-left: 20%;">goLanguage Program - Using Switch case statement</h1>
+		<hr> <br>
+		<h2>"Write a program which input two number and find either sum or difference or multiplication or division of the two numbers depending upon user choice."</h2>
+        <pre>
+            <code class="language-go">
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Enter a number1:")
+	number1, _ := reader.ReadString('\n')
+	number1 = strings.TrimSpace(number1)
+	intNumber1, _ := strconv.Atoi(number1)
+	fmt.Println("Enter number2:")
+	number2, _ := reader.ReadString('\n')
+	number2 = strings.TrimSpace(number2)
+	intNumber2, _ := strconv.Atoi(number2)
+	fmt.Println("Numbers Entered by user:", intNumber1, intNumber2)
+	fmt.Println("Press 1 for addition")
+	fmt.Println("Press 2 for subtraction")
+	fmt.Println("Press 3 for multiply")
+	fmt.Println("Press 4 for division")
+	press, _ := reader.ReadString('\n')
+	press = strings.TrimSpace(press)
+	intPressnumber, _ := strconv.Atoi(press)
+	fmt.Println("Number press by user:", intPressnumber)
+	switch intPressnumber {
+	case 1:
+		fmt.Println("addition of two number:", intNumber1+intNumber2)
+	case 2:
+		fmt.Println("subtraction of two number:", intNumber1-intNumber2)
+	case 3:
+		fmt.Println("multiplication of two number:", intNumber1*intNumber2)
+	case 4:
+		fmt.Println("division of two number:", intNumber1/intNumber2)
+	default:
+		fmt.Println("please press valid number from 1-4!")
+	}
+
+}
+
+            </code>
+        </pre>
+        <h2>Output:</h2>
+        <pre>
+            <code class="language-go">
+                //Output:
+Enter a number1:
+2
+Enter number2:
+4
+Numbers Entered by user: 2 4
+Press 1 for addition
+Press 2 for subtraction
+Press 3 for multiply
+Press 4 for division
+1
+Number press by user: 1
+addition of two number: 6
+            </code>
+		</pre>
+		<h2>Explaination of the code:</h2>
+		<p>
+			In this we take two input number from user i.e. number1 , number2.<br>
+			After that based on the user choice we have to perform addition, subtraction, multiplication, division on the two numbers i.e.
+			number1, number2 using switch case. 
+			<h3>Switch Case syntax:</h3>
+			<pre>
+				<code class="language-go">
+					Switch expression {
+						Case label 1:
+						Statement 
+						Case label 2:
+						Statement 
+						……
+						……….
+						Case label n:
+						Statement 
+						default: statements
+					}        
+				</code>
+			</pre>
+			<h3>So, in our program:-<br>
+			<b>Expression: intPressnumber</b><br>
+		<b>Case 1: addition</b><br>
+		<b>Case 2: subtraction </b><br>
+		<b>Case 3: multiplication</b><br>
+		<b>Case 4: division</b><br></h3>
+		<p> <h3>So, in our program user:</h3>
+Enter a number1: 2 <br>
+Enter number2:  4 <br>
+After that we print the number on the screen what user enter in number1 and number2 i.e. : <br>
+Numbers Entered by user: 2 4 <br> After that we use Switch case statement ;
+Press 1 for addition <br>
+Press 2 for subtraction<br>
+Press 3 for multiply<br>
+Press 4 for division<br>
+1 // press 1 is enter by user 
+Number press by user: 1 <br>
+addition of two number: 6 // On the user choice addition operation is perform on the number1 and number2. 
+			
+		</p>
+		</p>
+        </body>
+        </html>

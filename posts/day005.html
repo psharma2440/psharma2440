@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <title>Conditional Controlled Structure</title>
+    <body>
+        <form>
+            <input type="button" value="back" onclick="history.back()">
+        </form>
+        <h1 style="text-align: center;"> goLanguage - Conditional Controlled Structure <hr></h1>
+        <h2>Conditional Statement:<br></h2>
+        <p>
+            Conditional Controlled Structure may be define as it is a structure that is
+            used to compare more than one quantites. <br>
+            In Conditional Controlled Structure we have four types:<br>
+            1) if Statement<br>
+            2) if - else Statement<br>
+            3) Nested if - else Statement<br>
+            4) Switch case Statement<br>
+        </p>
+        <h2>1) if Statement:</h2>
+        <p> It is a Conditional Controlled Structure that is used to compare two quantites.<br>
+        <h3>Syntax:</h3>
+        <pre>
+            <code class="language-go">
+                      // Syntax:
+
+
+                if Expression / Condition{
+                 //Statements 
+                }
+                // if is keyword, Expression / condition may be variable, constant, arithmetic Expression or relational Expression 
+                 Statement may be single Statement or compound Statement.
+                 // compound Statement must be enclosed within braces({})
+            </code>
+        </pre>
+    </p>
+    <h2>2) if - else Statement:</h2>
+    <p>
+        It is also a Conditional Controlled Structure that allows to execute any one of the two statement depending 
+        upon the values of Expression.
+        <h2>Syntax:</h2>
+        <pre>
+            <code class="language-go">
+                     // Syntax:
+
+
+                if expression / condition{
+                    //statement1
+                }else{
+                    //statement2
+                }
+                // if the expression / condition is true statement1 is executed otherwise statement2 executed.
+            </code>
+        </pre>
+    </p>
+    <h2>3) Nested if - else:<br></h2>
+    <p>
+        When one if-else structure is embedded into another if-else it is called nested if-else.
+        <h3>Syntax:</h3>
+        <pre>
+            <code class="language-go">
+                      // Syntax:
+
+
+                if  condition-1 { 
+                    // code to be executed if condition-1 is true
+                } else if condition-2 {
+                    // code to be executed if condition-2 is true
+                } else {
+                    // code to be executed if both condition1 and condition2 are false
+                }
+                
+            </code>
+        </pre>
+    </p>
+    <h2>4)Switch case Statement:<br></h2>
+    <p>
+        It is a conditional controlled structure i.e. used to select a statement among multiple statements depending upon value of expression. 
+        <h3>Syntax:</h3>
+        <pre>
+            <code class="language-go">
+                       // Syntax:
+
+
+                Switch expression {
+                    Case label 1:
+                    Statement 
+                    Case label 2:
+                    Statement 
+                    ……
+                    ……….
+                    Case label n:
+                    Statement 
+                    default: statements
+                }        
+            </code>
+        </pre>
+    </p>
+    </body>
+</html>
