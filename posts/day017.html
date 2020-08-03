@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <title>Day017</title>
+    <body>
+        <form>
+            <input type="button" value="back" onclick="history.back()">
+        </form>
+        <h1 style="text-align: center;"><b>Program 07 - Using for loop</b></h1>
+        <h2>Write a program which firstly reverse the integer number and check whether an integer number is palindrome or not using for loop. </h2>
+        <pre>
+            <code class="language-go">
+package main
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	var digit int
+	var reverse int
+	fmt.Println("Enter a number:")
+	number, _ := reader.ReadString('\n')
+	number = strings.TrimSpace(number)
+	intNumber, _ := strconv.Atoi(number)
+	userNumber := intNumber
+	fmt.Println("Number enter by user",intNumber)
+	for intNumber > 0 {
+		digit = intNumber % 10
+		reverse = reverse*10 + digit
+		intNumber = intNumber / 10
+		fmt.Println(digit, reverse, intNumber)
+	}
+	if userNumber == reverse {
+		fmt.Println(userNumber, "is palindrome.")
+	} else {
+		fmt.Println(userNumber, "is not palindrome.")
+	}
+}
+            </code>
+        </pre>
+        <h2>Output:</h2>
+        <pre>
+            <code class="language-go">
+Enter a number:
+2002
+Number enter by user 2002
+2 2 200
+0 20 20
+0 200 2
+2 2002 0
+2002 is palindrome.
+            </code>
+		</pre>
+		<h2>Explanation:</h2>
+		<p>In this program, we take an integer number from user as an input value.<br>
+			As an output we reverse the number <br>
+		   and check whether a number is palindrome or not.</p>
+		   </body>
+		   </html>
+        

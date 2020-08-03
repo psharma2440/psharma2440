@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <title>Day018</title>
+    <body>
+        <form>
+            <input type="button" value="back" onclick="history.back()">
+        </form>
+        <h1 style="text-align: center;"><b>Program 08 - Using for loop</b></h1>
+        <h2>Write a program to calculate the sum of series 2-4+6-8....N using for loop.</h2>
+        <pre>
+            <code class="language-go">
+package main
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Enter the value n upto your see the sum of series:")
+	valueofN, _ := reader.ReadString('\n')
+	valueofN = strings.TrimSpace(valueofN)
+	intValuneofN, _ := strconv.Atoi(valueofN)
+	sum := 0
+	sign := 1
+	firstTerm := 2
+	for counter := 1; counter <= intValuneofN; counter++ {
+		sum = sum + firstTerm
+		firstTerm = counter * 2 * sign
+		sign = sign * -1
+	}
+	fmt.Println("Sum of series:"sum)
+}
+            </code>
+        </pre>
+        <h2>Output:</h2>
+        <pre>
+            <code class="language-go">
+                //Output
+Enter the value n upto your see the sum of series:
+500
+Sum of series: 502
+
+            </code>
+        </pre>
+        <h2>Explanation:</h2>
+        <p>
+            In this program, we calculate the sum of series 2-4+6-8.....+N<br>
+using (for loop). We take the value of 'N'from user as an input<br>
+upto which user want the sum of a series.<br>
+As an output we calculate the sum a series.<br>
+Accordingly to the user input value.
+        </p>
+        </body>
+        </html>

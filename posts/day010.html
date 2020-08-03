@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <title>Day010</title>
+    <body>
+        <form>
+            <input type="button" value="back" onclick="history.back()">
+        </form>
+        <h1 style="margin-left: 20%;">goLanguage Program - Using for loop</h1>
+        <hr> <br>
+        <h2 style="text-align: center;"><b>For loop</b><br></h2>
+    <br>
+    <br>
+    <h2>Looping:-Repeated execution of a set of statement for a define no. of time is called looping.</h2><br>
+    <h1>goLanguage has only one loop i.e. for loop.</h1><br>
+    <p>The basic <b>for loop</b> has three components separated by semi-colons. <br>
+1.	The init statement: Executed before the first iteration.<br>
+2.	The condition expression: Evaluated before every iteration.<br>
+3.	The post statement: Executed at the end of every iteration.<br>
+The init statement will often be a short variable declaration, and the variables declared they are visible only in the scope of for statement.<br>
+The loop will stop iterating once the Boolean condition evaluates the false.
+    </p>
+    <h2>Write a program that prompts the user to input a positive integer and then print the multipilcation table of that number.</h2>
+    <pre>
+        <code class="language-go">
+package main
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	var result int
+	fmt.Println("Enter a positive integer:")
+	positiveInteger, _ := reader.ReadString('\n')
+	positiveInteger = strings.TrimSpace(positiveInteger)
+	intPositiveInteger, _ := strconv.Atoi(positiveInteger)
+	fmt.Println("user enter a positive integer:", intPositiveInteger)
+	fmt.Println("Multiplication of table of",intPositiveInteger,":")
+	for counter := 1; counter <= 10; counter++ {
+		result = intPositiveInteger * counter
+		fmt.Println(result)
+	}
+
+}
+            </code>
+    </pre>
+    <h2>Output:</h2>
+    <pre>
+        <code class="language-go">
+            // Output:
+Enter a positive integer:
+400
+user enter a positive integer: 400
+Multiplication of table 400 :
+400
+800
+1200
+1600
+2000
+2400
+2800
+3200
+3600
+4000
+        </code>
+    </pre>
+    <h2>Explanation of the program:</h2>
+    <p>
+In this program, we prompt the user to input a positive integer <br>
+and then print the table of that number till 10.<br>
+As an output, we display the table.<br>
+    </p>
+    </body>
+    </html>
+    
+    

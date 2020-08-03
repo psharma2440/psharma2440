@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <title>Day020</title>
+    <body>
+        <form>
+            <input type="button" value="back" onclick="history.back()">
+        </form>
+        <h1 style="text-align: center;"><b>Program 10 - Using nested for loop</b></h1>
+        <h2><b>Nested looping:</b><br></h2>
+            <p>When a loop is embedded into another loop it is said to be a nested looping.<br>
+             In nested looping inner loop is executed completely again and again for each run of outer loop.</p>  
+        <h2>Write a program to show how one loop is embedded into another loop (Nested looping). </h2>
+        <pre>
+            <code class="language-go">
+package main
+
+import (
+	"fmt"
+)
+
+// nested loop
+func main() {
+	fmt.Println("Print a number:")
+	for i := 0; i < 5; i++ {
+		for j := 0; j < 10; j++ {
+			fmt.Println("i:", i, "j:", j)
+		}
+
+	}
+}
+            </code>
+        </pre>
+        <h2>Output:</h2>
+        <pre>
+            <code class="language-go">
+                //Output
+Print a number:
+i: 0 j: 0
+i: 0 j: 1
+i: 0 j: 2
+i: 0 j: 3
+i: 0 j: 4
+i: 0 j: 5
+i: 0 j: 6
+i: 0 j: 7
+i: 0 j: 8
+i: 0 j: 9
+i: 1 j: 0
+i: 1 j: 1
+i: 1 j: 2
+i: 1 j: 3
+i: 1 j: 4
+i: 1 j: 5
+i: 1 j: 6
+i: 1 j: 7
+i: 1 j: 8
+i: 1 j: 9
+i: 2 j: 0
+i: 2 j: 1
+i: 2 j: 2
+i: 2 j: 3
+i: 2 j: 4
+i: 2 j: 5
+i: 2 j: 6
+i: 2 j: 7
+i: 2 j: 8
+i: 2 j: 9
+i: 3 j: 0
+i: 3 j: 1
+i: 3 j: 2
+i: 3 j: 3
+i: 3 j: 4
+i: 3 j: 5
+i: 3 j: 6
+i: 3 j: 7
+i: 3 j: 8
+i: 3 j: 9
+i: 4 j: 0
+i: 4 j: 1
+i: 4 j: 2
+i: 4 j: 3
+i: 4 j: 4
+i: 4 j: 5
+i: 4 j: 6
+i: 4 j: 7
+i: 4 j: 8
+i: 4 j: 9
+            </code>
+        </pre>
+        <h2>Explanation:</h2>
+        <p>In this program, we shows how one loop is embedded into another loop (Nested looping).<br>
+            As an output we a print a number from 0-4 using nested looping.</p>
+            </body>
+            </html>

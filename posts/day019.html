@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <title>Day019</title>
+    <body>
+        <form>
+            <input type="button" value="back" onclick="history.back()">
+        </form>
+        <h1 style="text-align: center;"><b>Program 09 - Using for loop</b></h1>
+        <h2>Write a program to find the cube of a number.</h2>
+        <pre>
+            <code class="language-go">
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	var cube int
+	fmt.Println("Enter a number:")
+	number, _ := reader.ReadString('\n')
+	number = strings.TrimSpace(number)
+	intNumber, _ := strconv.Atoi(number)
+	for counter := 1; counter <= intNumber; counter++ {
+		cube = intNumber * intNumber * intNumber
+	}
+	fmt.Println("Cube of a",intNumber, "number:",cube)
+
+}
+            </code>
+        </pre>
+        <h2>Explanation:</h2>
+        <p>In this program, we calculating the cube of a number.<br>
+            As an input we take a number from user.<br>
+            As an output we calculating the cube of a number that user enter.<br>
+        </p>
+    </body>
+    </html>

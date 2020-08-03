@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <title>Day011</title>
+    <body>
+        <form>
+            <input type="button" value="back" onclick="history.back()">
+        </form>
+        <h1 style="text-align: center;">"Dare Game"</h1>
+        <pre>
+            <code class="language-go">
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Are you ready to perform a dare? YES / NO")
+	dare, _ := reader.ReadString('\n')
+	dare = strings.TrimSpace(dare)
+	dare = strings.ToUpper(dare)
+	// fmt.Println("Value of dare is: " + dare + ".")
+	if dare == "NO" {
+		fmt.Println("Have A Wonderfull Day")
+	}
+	// if dare == "Yes\r\n" {
+	// 	fmt.Println("Choose any number and then see your dare and do it.So,Are you ready? ")
+	// }
+	
+	if dare == "YES" {
+		fmt.Println("Choose any number and then see your dare and do it.So,Are you ready? ")
+	}
+	fmt.Println("GAME IS START")
+	fmt.Println("3 2 1 Go .....")
+	fmt.Println("Follow the below instruction while choosing the number:")
+	fmt.Println("1) Number is no start with zero.")
+	fmt.Println("2) Number is no start with any special character symbol like !,@,#,$...")
+	fmt.Println("3) Number is no start with alphabets.")
+	fmt.Println("Choose number:")
+	number, _ := reader.ReadString('\n')
+	number = strings.TrimSpace(number)
+	intNumber, _ := strconv.Atoi(number)
+	for counter := intNumber; counter <= intNumber; counter++ {
+		fmt.Println("Number choosed by you:", intNumber)
+		if intNumber == 0 {
+			break
+		}
+	}
+	fmt.Println("Loading ......")
+	fmt.Println(intNumber)
+	if intNumber%2 == 0 {
+		fmt.Println("Ahm... Your dare is to perform a belly dance/ sketch/ sing a song.")
+	} else {
+		fmt.Println("Ahm... Your dare is to Write a program in goLanuage which take two number from user and print the multipilcation of that two number.")
+	}
+	fmt.Println("Are you enjoy this dare? Yes / No:")
+	enjoy, _ := reader.ReadString('\n')
+	enjoy = strings.TrimSpace(enjoy)
+	enjoy =strings.ToUpper(enjoy)
+	if enjoy == "YES" {
+		fmt.Println("If you like this dare game. Please share your feedback in comment box.")
+	}
+	if enjoy == "NO" {
+		fmt.Println("If you don`t like this dare game then please tell me how can i improve this game. Please share you idea`s with me in comment box.")
+	}
+	fmt.Println("Thank you. Have a Wonderful day. #stayhome #staywith #codewithme")
+}
+
+            </code>
+        </pre>
+        <h2>Output:</h2>
+        <pre>
+            <code class="language-go">
+                //Output
+Are you ready to perform a dare? YES / NO
+Yes
+Choose any number and then see your dare and do it.So,Are you ready? 
+GAME IS START
+3 2 1 Go .....
+Follow the below instruction while choosing the number:
+1) Number is no start with zero.
+2) Number is no start with any special character symbol like !,@,#,$...
+3) Number is no start with alphabets.
+Choose number:
+30
+Number choosed by you: 30
+Loading ......
+30
+Ahm... Your dare is to perform a belly dance/ sketch/ sing a song.
+Are you enjoy this dare? Yes / No:
+Yes
+If you like this dare game. Please share your feedback in comment box.
+Thank you. Have a Wonderful day. #stayhome #staywith #codewithme
+            </code>
+		</pre>
+		<h2>Explanation:</h2>
+		<p>We are making a Dare Game using Go. In game, we ask a different questions to user. <br>
+			And based on user choice, we assign dare to him.<br>
+			As an output, we display dare and also want the feedback from user.<br></p>
+			<h2>Some errors are coming, when I make this dare game:</h2>
+			<p>1) If the user is entering the lowercase or mixed case string, it fails to match with "Yes", so I have converted the user input into uppercase and now matching with "YES" to make it correct result.</p>
+			<p>2) By default, Readstring reads a new line charcater, so to remove it I have used TrimSpaces function, present in <strong> strings </strong> package</p>
+    </body>
+</html>

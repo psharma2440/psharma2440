@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <title>Day012</title>
+    <body>
+        <form>
+            <input type="button" value="back" onclick="history.back()">
+        </form>
+        <h1 style="text-align: center;"><b>Program 02 - Using for loop</b></h1>
+        <h2>Write a program to print the sum of Positive series 1+2+3+.....n </h2>
+        <pre>
+            <code class="language-go">
+package main
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Enter the value of 'n' upto which you want the sum positive series:")
+	valueofn, _ := reader.ReadString('\n')
+	valueofn = strings.TrimSpace(valueofn)
+	intvalueofN, _ := strconv.Atoi(valueofn)
+	sum := 0
+	for count := 1; count <= intvalueofN; count++ {
+		sum = sum + count
+	}
+	fmt.Println("Sum of,intvalueofN,Positive series:", sum)
+}
+
+            </code>
+        </pre>
+        <h2>Output:</h2>
+        <pre>
+            <code class="language-go">
+                //Output:
+Enter the value of 'n' upto which you want the sum of positive series:
+10
+Sum of 10 Positive series: 55
+            </code>
+        </pre>
+        <h2>Explanation:</h2>
+        <p>
+In this program, we calculate the sum of first natural number<br>
+"or" Positive series 1+2+3+.....n known as natural number<br>
+using (for loop). We take the value of 'n'from user as an input<br>
+upto which user want the sum positive series.<br>
+As an output we calculate the sum of positive series.<br>
+Accordingly to the user input value.<br>
+        </p>
+    </body>
+</html>

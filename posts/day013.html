@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <title>Day013</title>
+    <body>
+        <form>
+            <input type="button" value="back" onclick="history.back()">
+        </form>
+        <h1 style="text-align: center;"><b>Program 03 - Using for loop</b></h1>
+        <h2>Write a program to print the sum of the factorial of a series 1!+2!+3!......+n.</h2>
+        <pre>
+            <code class="language-go">
+                package main
+
+// factorial of series 1! + 2! + 3! .....
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Factorial of series")
+	series, _ := reader.ReadString('\n')
+	series = strings.TrimSpace(series)
+	intSeries, _ := strconv.Atoi(series)
+	sum := 0
+	term := 1
+	for counter := 1; counter <= intSeries; counter++ {
+		term = term * counter
+		sum = sum + term 
+	}
+	fmt.Println("sum of factorial",intSeries,"number series:",sum)
+}
+            </code>
+        </pre>
+        <h2>Output:</h2>
+        <pre>
+            <code class="language-go">
+                //Output:
+Factorial of series
+5
+sum of factorial 5 number series: 153
+            </code>
+        </pre>
+        <h2>Explanation:</h2>
+        <p>
+            
+        </p>
+    </body>
+</html>
