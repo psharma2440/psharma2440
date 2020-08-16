@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day027</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>Program 6 - Array</b></h1>
+    <h2>Write a program to find out the smallest number in an array and take the number from user as an input.</h2>
+    <pre>
+        <code class="language-go">
+            package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	var a [4]int
+	fmt.Println("Enter the four number")
+	for counter := 0; counter < 4; counter++ {
+		fmt.Println("Value of", counter+1, "number:")
+		number, _ := reader.ReadString('\n')
+		number = strings.TrimSpace(number)
+		intNumber, _ := strconv.Atoi(number)
+		a[counter] = intNumber
+	}
+	var small int 
+	small = a[0]
+	for index, value := range a {
+		fmt.Println("Index:", index, "Value:", value)
+		if value < small {
+			small = value
+		}
+	}
+	fmt.Println("Smallest number:", small)
+}
+        </code>
+    </pre>
+    <h2>Output:</h2>
+    <pre>
+        <code class ="language-go">
+Enter the four number
+Value of 1 number:
+23
+Value of 2 number:
+45
+Value of 3 number:
+12
+Value of 4 number:
+34
+Index: 0 Value: 23 
+Index: 1 Value: 45 
+Index: 2 Value: 12 
+Index: 3 Value: 34 
+Smallest number: 12
+        </code>
+    </pre>
+    <h2>Explanation-</h2>
+    <p>
+        In this program, we take the four numbers from user as an input.<br>
+        and then we find the smallest number between them.<br>
+        As an output we display the smallest number.
+    </p>
+    </body>
+    </html>

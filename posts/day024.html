@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day024</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>Program 3 - Array</b></h1>
+    <h2>Write a program to print 10 float numbers with their Index value and numbers are present in an aaray.</h2>
+    <pre>
+        <code class="language-go">
+package main
+
+import "fmt"
+
+func main() {
+	var numbers [10]float32 = [10]float32{10.1, 20.1, 2.3, 122.01, 1.2, 23.1, 11.2, 23.4, 26.8, 13.7}
+	fmt.Println("10 float numbers are:", numbers)
+	for index, value := range numbers {
+		fmt.Println("Index:", index, "Value:", value)
+	}
+}
+        </code>
+    </pre>
+    <h2>Output:</h2>
+    <pre>
+        <code class="language-go">
+10 float numbers are: [10.1 20.1 2.3 122.01 1.2 23.1 11.2 23.4 26.8 13.7]
+Index: 0 Value: 10.1  
+Index: 1 Value: 20.1  
+Index: 2 Value: 2.3   
+Index: 3 Value: 122.01
+Index: 4 Value: 1.2   
+Index: 5 Value: 23.1  
+Index: 6 Value: 11.2
+Index: 7 Value: 23.4
+Index: 8 Value: 26.8
+Index: 9 Value: 13.7
+        </code>
+    </pre>
+    <h2>Explanation:</h2>
+    <p>In this program, We print the 10 float numbers<br>
+    with their Index value.<br>
+And 10 float numbers are present in an array (numbers).</p>
+</body>
+</html>
+

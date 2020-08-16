@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day025</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>Program 4 - Array</b></h1>
+    <h2>Write a progam to take 10 integer inputs from user and store them in an array and print them on screen.</h2>
+    <pre>
+        <code class="language-go">
+            package main
+
+            import (
+                "bufio"
+                "fmt"
+                "os"
+                "strconv"
+                "strings"
+            )
+            
+            func main() {
+                reader := bufio.NewReader(os.Stdin)
+                var integerNumber [10]int
+                for counter := 0; counter < 10; counter++ {
+                    fmt.Println( "Integer number",counter+1,":")
+                    numbers, _ := reader.ReadString('\n')
+                    numbers = strings.TrimSpace(numbers)
+                    intNumbers, _ := strconv.Atoi(numbers)
+                    integerNumber[counter] = intNumbers
+                }
+                fmt.Println("10 interger numbers are:",integerNumber)
+            }
+            
+            
+        </code>
+    </pre>
+    <h2>Output:</h2>
+    <pre>
+        <code class="language-go">
+Integer number 1 :
+12
+Integer number 2 :
+11
+Integer number 3 :
+33
+Integer number 4 :
+56
+Integer number 5 :
+123
+Integer number 6 :
+566
+Integer number 7 :
+245
+Integer number 8 :
+122
+Integer number 9 :
+11
+Integer number 10 :
+109
+10 interger numbers are: [12 11 33 56 123 566 245 122 11 109]
+
+        </code>
+    </pre>
+    <h2>Explanation:</h2>
+    <p>
+        In this program, we print the 10 integer numbers with their index value.<br>
+        As an input we take 10 interger numbers from user.<br>
+        And then display the 10 integer numbers with their index value as an output. 
+    </p>
+    </body>
+    </html>

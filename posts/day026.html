@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day026</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>Program 5 - Array</b></h1>
+    <h2>Write a program to take 5 integer inputs from user and store them in an array.<br>
+        Now, copy all the elements in an another array but in reverse order.</h2>
+        <pre>
+            <code class="language-go">
+                package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Enter 5 numbers in an array.")
+	var arr [5]int
+	for counter := 0; counter < 5; counter++ {
+		fmt.Println("Number", counter+1, "in an aaray:")
+		number, _ := reader.ReadString('\n')
+		number = strings.TrimSpace(number)
+		intNumber, _ := strconv.Atoi(number)
+		arr[counter] = intNumber
+
+	}
+	var reversedArr [5]int
+	var j int
+	for i := len(arr); i > 0; i-- {
+		reversedArr[j] = arr[i-1]
+		j++
+	}
+	fmt.Println("Numbers in reverser order :-", reversedArr)
+}
+
+            </code>
+        </pre>
+        <h2>Output:</h2>
+        <pre>
+            <code class="language-go">
+                Enter 5 numbers in an array.
+Number 1 in an aaray:
+23
+Number 2 in an aaray:
+45
+Number 3 in an aaray:
+23
+Number 4 in an aaray:
+12
+Number 5 in an aaray:
+12
+Numbers in reverser order :- [12 12 23 45 23]
+            </code>
+        </pre>
+        <h2>EXplanation:</h2>
+        <p>
+        In this program, we take 5 integer inputs from user<br>
+        and then store them in an array (arr).<br>
+        After that copy all the number in another array but in reverseorder.</p>
+        </body>
+        </html>

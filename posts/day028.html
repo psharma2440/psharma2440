@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day028</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>Program  7- Array</b></h1>
+    <h2>Write a program to find out the largest number in an array and take the number from user as an input.</h2>
+    <pre>
+        <code class="language-go">
+package main
+
+import ("bufio"
+"fmt"
+"os"
+"strconv"
+"strings"
+)
+
+func main() {
+reader := bufio.NewReader(os.Stdin)
+var a [4]int
+fmt.Println("Enter the four number")
+for counter := 0; counter < 4; counter++ {
+    fmt.Println("Value of", counter+1, "number:")
+    number, _ := reader.ReadString('\n')
+    number = strings.TrimSpace(number)
+    intNumber, _ := strconv.Atoi(number)
+    a[counter] = intNumber
+}
+var large int 
+large = a[0]
+for index, value := range a {
+    fmt.Println("Index:", index, "Value:", value)
+    if value > large {
+        lagre = value
+    }
+}
+fmt.Println("Largest number:", large)
+}
+    </code>
+</pre>
+<h2>Output:</h2>
+<pre>
+    <code class ="language-go">
+        Enter the four number
+        Value of 1 number:
+        3
+        Value of 2 number:
+        122
+        Value of 3 number:
+        14
+        Value of 4 number:
+        45
+        Index: 0 Value: 3 
+        Index: 1 Value: 122 large: 3
+        Index: 2 Value: 14 large: 122
+        Index: 3 Value: 45 large: 122
+        Largest number: 122
+    </code>
+</pre>
+        <h2>Explanation:</h2>
+        <p>In this program, we find the largest number.<br>
+        We take the number from user as an input.<br>
+    And as an output we find the largest number. </p>
+</body>
+</html>
+    

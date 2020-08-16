@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day029</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>Program  8- Array</b></h1>
+    <h2>Write a program to take 10 integer inputs from user and store them in an array. <br>
+        Again ask user to give a number.<br>
+         Now, tell user whether that number is present in array or not.</h2>
+    <pre>
+        <code class="language-go">
+            package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	var integerNumber [5]int
+	for counter := 0; counter < 5; counter++ {
+		fmt.Println("Integer number", counter+1, ":")
+		numbers, _ := reader.ReadString('\n')
+		numbers = strings.TrimSpace(numbers)
+		intNumbers, _ := strconv.Atoi(numbers)
+		integerNumber[counter] = intNumbers
+	}
+	fmt.Println("5 interger numbers are:", integerNumber)
+	
+	fmt.Println("Enter a number:")
+		usernumber, _ := reader.ReadString('\n')
+		usernumber = strings.TrimSpace(usernumber)
+		intuserNumber, _ := strconv.Atoi(usernumber)
+		fmt.Println("Number entered by user:", intuserNumber)
+		for index, value := range integerNumber {
+			if intuserNumber == value {
+				fmt.Println("index:", index, "value:", value)
+			fmt.Println(intuserNumber, "Number is present in array")
+		}
+
+	}
+
+}
+        </code>
+    </pre>
+    <h2>Output:</h2>
+    <pre>
+        <code class="language-go">
+Integer number 1 :
+12
+Integer number 2 :
+23
+Integer number 3 :
+44
+Integer number 4 :
+23
+Integer number 5 :
+22
+10 interger numbers are: [12 23 44 23 22]
+Enter a number:
+121
+Number entered by user: 121
+
+        </code>
+    </pre>
+    <h2>Explanation:</h2>
+    <p>
+        In this program we take 5 interger from user as an input and store them in an array.<br>
+        And then again ask the user to enter a number,<br>
+        Then check wheter a number is present is an array or not.<br>
+        As an output we tell user whether that number is present in array or not.<br>
+    </p>
+</body>
+</html>
+
+    

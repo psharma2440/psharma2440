@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day030</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>Program 9 - Array</b></h1>
+	<h2>Write a program to find out:-<br></h2>
+		<h3>1)Even Number<br>
+		2)Odd Number<br>
+	3)Zero`s Number<br>
+4)Negative Number<br>
+5)Positive Number<br></h3> 
+
+    <pre>
+        <code class="language-go">
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	var numbers [5]int
+	counter := 0
+	for ; counter < 5; counter++ {
+		fmt.Println("Enter the value of a", counter+1, "number:")
+		number, _ := reader.ReadString('\n')
+		number = strings.TrimSpace(number)
+		intNumbers, _ := strconv.Atoi(number)
+		numbers[counter] = intNumbers
+	}
+	for index, value := range numbers {
+		if value%2 == 0 {
+			fmt.Println("The even number of index", index, "and the value is:", value)
+		}
+		if value%2 != 0 {
+			fmt.Println("The odd number of index", index, " and the value is:", value)
+		}
+	}
+	for index, value := range numbers {
+		if value > 0 {
+			fmt.Println("The positive number of index ", index, "and the value is:", value)
+		} else if value < 0 {
+			fmt.Println("The negative number of index", index, " and the value is:", value)
+		}
+		if value == 0 {
+			fmt.Println("The zero number of index", index, "and the value is:", value)
+		}
+
+	}
+}
+</code>
+	</pre>
+	<h2>Output:-</h2>
+	<pre>
+		<code class="language-go">
+			Enter the value of a 1 number:
+			23
+			Enter the value of a 2 number:
+			-2
+			Enter the value of a 3 number:
+			2
+			Enter the value of a 4 number:
+			24
+			Enter the value of a 5 number:
+			0
+			The odd number of index 0  and the value is: 23
+			The even number of index 1 and the value is: -2
+			The even number of index 2 and the value is: 2
+			The even number of index 3 and the value is: 24
+			The even number of index 4 and the value is: 0
+			The positive number of index  0 and the value is: 23
+			The negative number of index 1  and the value is: -2
+			The positive number of index  2 and the value is: 2
+			The positive number of index  3 and the value is: 24
+			The zero number of index 4 and the value is: 0
+		</code>
+	</pre>
+	<h2>Explanation:</h2>
+	<p>
+		In this program, we find the positive number, negative number, even number, odd number, zero`s number.<br>
+		We take the numbers from user as an input.<br>
+		As an output we find out the positive number, negative number, even number, odd number, zero`s number.<br>
+	</p>
+</body>
+</html>

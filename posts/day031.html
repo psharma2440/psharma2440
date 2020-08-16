@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day031</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>Program 10 - Array</b></h1>
+    <h2>Write a program to find out the average marks of the 5 students which learn Operating system subject.</h2>
+    <pre>
+        <code class="language-go">
+            package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Operating System Sessional marks of 5 students")
+	var students [5]int
+	sum := 0
+	for counter := 0; counter < 5; counter++ {
+		fmt.Println("Roll NO.", counter+1, "marks:")
+		marks, _ := reader.ReadString('\n')
+		marks = strings.TrimSpace(marks)
+		intMarks, _ := strconv.Atoi(marks)
+		students[counter] = intMarks
+		sum = sum + intMarks
+	}
+	var averageMarks int = sum / 5
+	fmt.Println("Average marks:",averageMarks)
+}
+
+        </code>
+    </pre>
+    <h2>Output:-</h2>
+    <pre>
+        <code>
+            Operating System Sessional marks of 5 students
+            Roll NO. 1 marks:
+            25
+            Roll NO. 2 marks:
+            27
+            Roll NO. 3 marks:
+            21
+            Roll NO. 4 marks:
+            20
+            Roll NO. 5 marks:
+            11
+            Average marks: 20
+        </code>
+    </pre>
+    <h2>Explanation:-</h2>
+    <p>
+     In this program, we find out the average marks of the 5 students which learn Operating system subject.<br>
+     We take the marks of 5 students from user as an input.<br>
+     And then as an output we calculate the average marks of the 5 students.<br>
+    </p>
+</body>
+</html>
+
+		

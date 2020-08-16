@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day029</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>Swaping of the numbers</b></h1>
+    <h2>Write a program to swap two numbers.</h2>
+<pre>
+    <code class="language-go">
+        package main
+
+import "fmt"
+
+func main() {
+	var a int = 20
+	var b int = 10
+	fmt.Println("Value of a before swaping:", a)
+	fmt.Println("Value of b before swaping:", b)
+	var c int
+	c = a
+	fmt.Println("value of c", c)
+	a = b
+	fmt.Println("Value of a after swaping", a)
+	b = c
+	fmt.Println("value of b after swaping", b)
+}
+    </code>
+</pre>
+<h2>Output:</h2>
+<pre>
+    <code class="language-go">
+Value of a before swaping: 20
+Value of b before swaping: 10
+value of c 20
+Value of a after swaping 10
+value of b after swaping 20
+    </code>
+</pre>
+<h2>Explanation:</h2>
+<p>In this program, we swap the two numbers.<br>
+As an output we display both the cases<br>
+1) Values before swaping.<br>
+2) Values after swaping.
+</p>
