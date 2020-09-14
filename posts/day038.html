@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day038</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>Program - 5</b></h1>
+    <h2>Write a program to calculate the frequency of the number.</h2>
+    <pre>
+        <code class="language-go">
+            package main
+
+            import (
+                "bufio"
+                "fmt"
+                "os"
+                "strconv"
+                "strings"
+            )
+            
+            func main() {
+                reader := bufio.NewReader(os.Stdin)
+                var arr [5]int
+                fmt.Println("Enter the elements in arr:")
+                i := 0
+                for ; i < 5; i++ {
+                    fmt.Println("Element value at", i+1)
+                    value, _ := reader.ReadString('\n')
+                    value = strings.TrimSpace(value)
+                    intValue, _ := strconv.Atoi(value)
+                    arr[i] = intValue
+                }
+                fmt.Println("Elements in arr array are:", arr[0:5])
+                freq := 0
+                fmt.Println("Enter the no. to find out the frequency")
+                num, _ := reader.ReadString('\n')
+                num = strings.TrimSpace(num)
+                intNum, _ := strconv.Atoi(num)
+                for i := 0; i < 5; i++ {
+                    if arr[i] == intNum {
+                        freq++
+                    }
+                }
+                fmt.Println("Frequence of", intNum, "is", freq)
+            }
+            
+        </code>
+    </pre>
+    <h2>Output:</h2>
+    <pre>
+
+        <code class="language-go">
+            Enter the elements in arr:
+            Element value at 1
+            2
+            Element value at 2
+            3
+            Element value at 3
+            12
+            Element value at 4
+            45
+            Element value at 5
+            3
+            Elements in arr array are: [2 3 12 45 3]
+            Enter the no. to find out the frequency
+            3
+            Frequence of 3 is 2
+        </code>
+    </pre>
+    <h2>Explanation:</h2>
+    <p>In this program, as an input user enter the elements in arra array.<br>
+        And then again user insert one number which he/she want to calculate the frequency of that number.<br>
+        And then as an output we count the frequency of that number. <br>    
+    </p>
+</body>
+</html>

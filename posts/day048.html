@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day048</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>Program - 3</b></h1>
+    <h2> Write a program to add elements of slice and calculate lenght.</h2>
+    <pre>
+        <code class="language-go">
+            package main
+
+import "fmt"
+
+func main() {
+	var name [][]string = [][]string{
+		{"A", "N", "S", "H"},
+		{"P", "R", "F", "P"},
+	}
+	fmt.Println("Before Append:\n", name)
+	fmt.Println("Length", len(name))
+	name = append(name, []string{"d", "e", "f"})
+	fmt.Println("After Append:\n", name)
+	fmt.Println("Length", len(name))
+}
+        </code>
+        </pre>
+        <h2>Output:</h2>
+        <pre>
+            <code class="language-go">
+ Before Append:
+ [[A N S H] [P R F P]]
+Length: 2
+After Append:
+ [[A N S H] [P R F P] [d e f]]
+Length: 3
+            </code>
+        </pre>
+        <h2>Explanation:</h2>
+        <p>In this program, we use the append function to add the elements in the slice (name).<br>
+        As an output we display the slice before and after use of append function<br>
+    and also compute it`s lenght using len function.</p>

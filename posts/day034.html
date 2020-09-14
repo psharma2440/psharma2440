@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day034</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>Program - 1</b></h1>
+    <h2>Write a program to print the element of 2D array.</h2>
+    <pre>
+        <code class="language-go">
+            package main
+
+import "fmt"
+
+func main() {
+	var x [5][5]int = [5][5]int{
+		{1, 2, 3, 4, 5},
+		{6, 7, 8, 9, 10},
+		{11, 12, 13, 14, 15},
+		{21, 22, 23, 24, 25},
+		{30, 31, 32, 33, 34},
+	}
+	fmt.Println("2D array 'x' elements are:\n", x)
+	for i, v := range x {
+		fmt.Println("Row:", i, "Value:", v)
+	}
+}
+
+        </code>
+    </pre>
+    <h2>Output:</h2>
+    <pre>
+
+        <code class="language-go">
+2D array 'x' elements are:
+ [[1 2 3 4 5] [6 7 8 9 10] [11 12 13 14 15] [21 22 23 24 25] [30 31 32 33 34]]    
+Row: 0 Value: [1 2 3 4 5]
+Row: 1 Value: [6 7 8 9 10]
+Row: 2 Value: [11 12 13 14 15]
+Row: 3 Value: [21 22 23 24 25]
+Row: 4 Value: [30 31 32 33 34]
+        </code>
+    </pre>
+    <h2>Explanation:</h2>
+    <p>In this program, we print the elements of 2D array (x),<br>
+        And then also print the Row index with their value as an output.
+    </p>
+</body>
+</html>

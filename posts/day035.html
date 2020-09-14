@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day035</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>Program - 2</b></h1>
+    <h2>Write a program to compute the sum of the two array.</h2>
+    <pre>
+        <code class="language-go">
+            package main
+
+            import "fmt"
+            
+            func main() {
+                var arr1 [2][2]int = [2][2]int{
+                    {2, 3},
+                    {4, 5},
+                }
+                var arr2 [2][2]int = [2][2]int{
+                    {2, 3},
+                    {4, 5},
+                }
+                fmt.Println("Element in first array =", arr1)
+                fmt.Println("Element in second array =", arr2)
+                var sum [2][2]int
+                for i := 0; i < 2; i++ {
+                    for j := 0; j < 2; j++ {
+                        sum[i][j] = arr1[i][j] + arr2[i][j]
+                    }
+                }
+                fmt.Println("Sum of first and second array element`s =", sum)
+            }
+            
+        </code>
+    </pre>
+    <h2>Output:</h2>
+    <pre>
+
+        <code class="language-go">
+            Element in first array = [[2 3] [4 5]]
+            Element in second array = [[2 3] [4 5]]
+            Sum of first and second array element`s = [[4 6] [8 10]]
+        </code>
+    </pre>
+    <h2>Explanation:</h2>
+    <p>In this program, we compute the sum of two array:<br>
+        arr1 and arr2;<br>
+        After that store the result of sum in sum array.<br>
+        And then as an output we display the element`s of arr1, arr2 and sum  array.
+    </p>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day050</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>Program - 5</b></h1>
+    <h2> Creating a slice with make.</h2>
+    <pre>
+        <code class="language-go">
+            package main
+            
+            import (
+                "bufio"
+                "fmt"
+                "os"
+                "strconv"
+                "strings"
+            )
+            
+            func main() {
+                reader := bufio.NewReader(os.Stdin)
+                mySlice := make([]int, 1, 100)
+                fmt.Println("Enter the number:")
+                num, _ := reader.ReadString('\n')
+                num = strings.TrimSpace(num)
+                intNum, _ := strconv.Atoi(num)
+                for counter := 0; counter < intNum; counter++ {
+                    fmt.Println("Value at",counter+1,":")
+                    numbers, _ := reader.ReadString('\n')
+                    numbers = strings.TrimSpace(numbers)
+                    intNumber, _ := strconv.Atoi(numbers)
+                    mySlice = append(mySlice, intNumber)
+                    // mySlice[counter] = intNumber
+                }
+            
+                reverseSlice := make([]int, 0, 100)
+                for i := len(mySlice) - 1; i > 0; i-- {
+                    // reverseSlice[j] = mySlice[i-1]
+                    reverseSlice = append(reverseSlice, mySlice[i])
+                }
+                fmt.Println("Reverse of slice:")
+                for i := 0; i < len(reverseSlice); i++ {
+                    fmt.Println(reverseSlice[i])
+                }
+            }      
+        </code>
+        </pre>\
+        <h2>Output:</h2>
+        <pre>
+            <code class="language-go">
+Enter the number:
+4
+Value at 1 :
+2
+Value at 2 :
+12
+Value at 3 :
+14
+Value at 4 :
+16
+Reverse of slice:
+16
+14
+12
+2
+            </code>
+        </pre>
+        <h2>Explanation:</h2>
+        <p>In this program, we create a slice with make i.e mySlice<br>
+        After that we take the input value from user to store the numbers in mySlice <br>
+    and then reverse the number that are enter by user.  </p>
+    </body>
+    </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day041</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>Formatting Verbs</b></h1>
+    <h2> Write a program to display different types of verb with their Output type using Printf function.</h2>
+    <pre>
+        <code class="language -go">
+            package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Formatting verbs\n")
+	// first field have min. width of 12 character and no min. width of second field character
+	fmt.Printf("%12s | %s\n", "Verbs", "Output")
+	fmt.Println("---------------------------------") // printing a heading divider
+	// first field have min. width of 5 character and min. width of second field character is 20
+	fmt.Printf("%5s | %20s\n", "%f", "Floating point")
+	fmt.Printf("%5s | %20s\n", "%d", "Decimal integer")
+	fmt.Printf("%5s | %20s\n", "%s", "string")
+	fmt.Printf("%5s | %20s\n", "%t", "Boolean(True/False)")
+	fmt.Printf("%5s | %20s\n", "%%", "A literal percent sign")
+}
+
+        </code>
+        </pre>
+        <h2>Output:</h2>
+        <pre>
+            <code class="language-go">
+Formatting verbs
+
+       Verbs | Output
+---------------------------------
+   %f |       Floating point
+   %d |      Decimal integer
+   %s |               string
+   %t |  Boolean(True/False)
+   %% | A literal percent sign
+
+            </code>
+        </pre>
+        <h2>Explanation:</h2>
+        <p>In this program, we display the different types of formatting verbs like,<br>
+        %f, %s, %t, etc with their output value using Printf function.</p>
+</body>
+</html>

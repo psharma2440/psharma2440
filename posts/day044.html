@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day044</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>String package- replacer</b></h1>
+    <pre>
+        <code class="language-go">
+            package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var a string = `Hell$! 
+	#g$lang #g$pher #c$ding #learng$ #day035`
+	fmt.Println("Before use of string package replacer type:\n", a)
+	replacer := strings.NewReplacer("$", "o")
+	fixed := replacer.Replace(a)
+	fmt.Println("After use of string package replacer type:\n", fixed)
+}
+
+        </code>
+    </pre>
+    <h2>Output:</h2>
+    <pre>
+        <code class="language-go">
+            Before use of string package replacer type:
+            Hell$!
+                   #g$lang #g$pher #c$ding #learng$ #day035
+           After use of string package replacer type:
+            Hello!
+                   #golang #gopher #coding #learngo #day035
+        </code>
+    </pre>
+    <h2>Explanation:</h2>
+    <p>Working with String Package- replacer.In this program, as an output we can <br>
+    replace the $ dollar symbol wiht letter o.</p>
+</body>
+</html>
+            

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day043</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>reflect package</b></h1>
+    <pre>
+        <code class="language-go">
+            package main
+
+import (
+	"fmt"
+	"reflect"
+)
+
+func main() {
+	fmt.Println("View the type of of value`s")
+	// Return the type of it`s argument
+	fmt.Println("1) 42:", reflect.TypeOf(42))
+	fmt.Println("2) true:", reflect.TypeOf(true))
+	fmt.Println("3) 1:", reflect.TypeOf(1))
+	fmt.Println("4) 12.23:", reflect.TypeOf(12.23))
+	fmt.Println("5) Hello Coder:", reflect.TypeOf("Hello Coder"))
+
+}
+
+        </code>
+    </pre>
+    <h2>Output:</h2>
+    <pre>
+        <code class="language-go">
+            View the type of of value`s
+            1) 42: int
+            2) true: bool
+            3) 1: int
+            4) 12.23: float64
+            5) Hello Coder: string
+        </code>
+    </pre>
+    <h2>Explanation:</h2>
+    <p>Working with reflect Package.In this program, as an output we can <br>
+    view the type of value by passong it to reflect package`s TypeOf function.</p>
+</body>
+</html>
+            

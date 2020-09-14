@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day049</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>Program - 4</b></h1>
+    <h2> Write a program to delete the element of a slice and calculate it`s length.</h2>
+    <pre>
+        <code class="language -go">
+            package main
+
+import "fmt"
+
+func main() {
+	x := []int{2, 3, 5, 7, 6}
+	fmt.Println("Elements before delete of a slice 'x': ", x)
+	fmt.Println("Lenght",len(x))
+	// delete a slice
+	x = append(x[0:2])
+	fmt.Println("Elements after delete of a slice 'x':", x)
+	fmt.Println("Lenght",len(x))
+}
+        </code>
+        </pre>
+        <h2>Output:</h2>
+        <pre>
+            <code class="language-go">
+Elements before delete of a slice 'x':  [2 3 5 7 6]
+Lenght 5
+Elements after delete of a slice 'x': [2 3]
+Lenght 2
+            </code>
+        </pre>
+        <h2>Explanation:</h2>
+        <p>In this program, we delete the elements of a slice 'x'.<br>
+        And as an output we display the elements of a slice 'x' before and after delete the elements<br>
+    and also compute the length of the slice 'x'.</p>
+</body>
+</html>

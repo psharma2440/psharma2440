@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../themes/highlight/styles/atom-one-dark.css">
+        <script src="../themes/highlight/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day047</title>
+</head>
+<body>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+    </form>
+    <h1 style="text-align: center;"><b>Program - 2</b></h1>
+    <h2> Write a program to compute total no. of rows and columns in Slice and print all the elements of slice.</h2>
+    <pre>
+        <code class="language-go">
+            package main
+
+import "fmt"
+
+func main() {
+	var x [][]int = [][]int{
+		{1, 2, 3, 4, 5},
+		{6, 7, 8, 9, 10},
+		{11, 12, 13, 14, 15},
+		{21, 22, 23, 24, 25},
+		{30, 31, 32, 33, 34},
+	}
+	fmt.Println("Slice 'x' elements are:\n", x)
+
+	rows := 0
+	columns := 0
+	for i:= range x {
+		rows = 1 + i
+		columns = 1 + i
+	}
+	fmt.Println("Total rows in 'x' Slice:", rows)
+	fmt.Println("Total columns in 'x' Slice:", columns)
+}
+</code>
+</pre>
+<h2>Output:</h2>
+<pre>
+    <code class="language-go">
+ Slice 'x' elements are:
+ [[1 2 3 4 5] [6 7 8 9 10] [11 12 13 14 15] [21 22 23 24 25] [30 31 32 33 34]]    
+Total rows in 'x' Slice: 5
+Total columns in 'x' Slice: 5
+    </code>
+</pre>
+<h2>Explanation:</h2>
+<p>In this program, as an output we print all the elements of slice 'x'.<br>
+And then calculate the total no. of rows and columns in a Slice.</p>
+</body>
+</html>
+
